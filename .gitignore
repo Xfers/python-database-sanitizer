@@ -8,6 +8,5 @@ __pycache__
 /.pytest_cache
 /build
 /coverage.xml
-/dist
 /htmlcov
 /venv
