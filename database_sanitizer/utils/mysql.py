@@ -93,7 +93,8 @@ def decode_mysql_literal(text):
     if MYSQL_STRING_PATTERN.match(text):
         return decode_mysql_string_literal(text)
 
-    raise ValueError("Unable to decode given value: %r" % (text,))
+    return text
+    # raise ValueError("Unable to decode given value: %r" % (text,))
 
 
 MYSQL_STRING_ESCAPE_SEQUENCE_PATTERN = re.compile(r"\\(.)")
