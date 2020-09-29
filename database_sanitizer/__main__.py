@@ -11,10 +11,10 @@ import six
 
 from .config import Configuration
 from .dump import run
-from importlib import reload
+#from importlib import reload
 
-reload(sys)
-sys.setdefaultencoding('utf8')
+#reload(sys)
+#sys.setdefaultencoding('utf8')
 
 def main(argv=sys.argv):
     parser = argparse.ArgumentParser(
