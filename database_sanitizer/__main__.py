@@ -11,6 +11,7 @@ import six
 
 from .config import Configuration
 from .dump import run
+from importlib import reload
 
 reload(sys)
 sys.setdefaultencoding('utf8')
