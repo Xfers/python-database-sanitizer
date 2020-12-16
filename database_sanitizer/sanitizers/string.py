@@ -22,6 +22,15 @@ def sanitize_zfill(value):
     return None if value is None else "".zfill(len(value))
 
 
+def sanitize_nfill(value):
+    """
+    Built-in sanitizer which replaces the original value with random numbers.
+    """
+    if not value:
+        return value
+    return ''.join(random.choice(string.digits) for _ in range(len(value)))
+
+
 def sanitize_random(value):
     """
     Random string of same length as the given value.

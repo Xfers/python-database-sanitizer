@@ -139,6 +139,9 @@ def sanitize_from_stream(stream, config):
                 sanitized_values.append(encode_mysql_literal(value))
             sanitized_value_tuples.append(sanitized_values)
 
+        if not sanitized_value_tuples:
+            continue
+
         # Finally create new `INSERT INTO` statement from the sanitized values.
         yield "INSERT INTO `%s` (%s) VALUES %s;" % (
             table_name,
